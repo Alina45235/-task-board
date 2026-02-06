@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Boards - Управление задачами</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Фиксированный заголовок -->
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <i class="fas fa-trello"></i>
+                        <h1>MY BOARDS</h1>
+                    </div>
+                    <div class="header-actions">
+                        <button class="header-btn" title="Добавить доску">
+                            <i class="fas fa-plus"></i>
+                            <span>Добавить доску</span>
+                        </button>
+                        <button class="header-btn" title="Поиск">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="header-btn" title="Уведомления">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="board-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-layer-group"></i>
+                        <span>Досок: <strong>5</strong></span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-tasks"></i>
+                        <span>Задач: <strong>27</strong></span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-user-check"></i>
+                        <span>Выполнено: <strong>12</strong></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Контейнер для горизонтального скролла досок -->
+        <main class="boards-container">
+            <div class="boards-scroll-wrapper">
+                <!-- Доска 1 -->
+                <div class="board">
+                    <div class="board-header">
+                        <h3><i class="fas fa-list-check"></i> To Do</h3>
+                        <div class="board-actions">
+                            <button class="board-action-btn" title="Добавить задачу">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <button class="board-action-btn" title="Настройки">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="tasks-list">
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority high"></span>
+                                <span class="task-id">#TASK-101</span>
+                            </div>
+                            <h4 class="task-title">Разработать прототип главной страницы</h4>
+                            <p class="task-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 15 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 3</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Анна С.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label design">Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority medium"></span>
+                                <span class="task-id">#TASK-102</span>
+                            </div>
+                            <h4 class="task-title">Подготовить техническое задание</h4>
+                            <p class="task-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 16 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 1</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Иван К.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label docs">Docs</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority low"></span>
+                                <span class="task-id">#TASK-103</span>
+                            </div>
+                            <h4 class="task-title">Согласовать дизайн с клиентом</h4>
+                            <p class="task-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 17 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 5</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Мария И.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label meeting">Meeting</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority high"></span>
+                                <span class="task-id">#TASK-104</span>
+                            </div>
+                            <h4 class="task-title">Настроить сервер для тестирования</h4>
+                            <p class="task-desc">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 18 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 2</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Сергей В.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label dev">Dev</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="add-task-btn">
+                        <i class="fas fa-plus"></i> Добавить задачу
+                    </button>
+                </div>
+
+                <!-- Доска 2 (с большим количеством задач для вертикального скролла) -->
+                <div class="board">
+                    <div class="board-header">
+                        <h3><i class="fas fa-spinner"></i> In Progress</h3>
+                        <div class="board-actions">
+                            <button class="board-action-btn" title="Добавить задачу">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <button class="board-action-btn" title="Настройки">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="tasks-list">
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority high"></span>
+                                <span class="task-id">#TASK-201</span>
+                            </div>
+                            <h4 class="task-title">Разработать API для интеграции</h4>
+                            <p class="task-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 12 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 7</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Алексей П.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label dev">Dev</span>
+                                    <span class="task-label backend">Backend</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority medium"></span>
+                                <span class="task-id">#TASK-202</span>
+                            </div>
+                            <h4 class="task-title">Создать базу данных</h4>
+                            <p class="task-desc">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 13 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 4</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Дмитрий С.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label dev">Dev</span>
+                                    <span class="task-label database">DB</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority low"></span>
+                                <span class="task-id">#TASK-203</span>
+                            </div>
+                            <h4 class="task-title">Написать тесты для модулей</h4>
+                            <p class="task-desc">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 14 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 2</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Ольга М.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label testing">Testing</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority high"></span>
+                                <span class="task-id">#TASK-204</span>
+                            </div>
+                            <h4 class="task-title">Оптимизировать загрузку изображений</h4>
+                            <p class="task-desc">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 15 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 6</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Елена К.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label frontend">Frontend</span>
+                                    <span class="task-label optimization">Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority medium"></span>
+                                <span class="task-id">#TASK-205</span>
+                            </div>
+                            <h4 class="task-title">Рефакторинг кода платежного модуля</h4>
+                            <p class="task-desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 16 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 3</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Павел Л.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label dev">Dev</span>
+                                    <span class="task-label refactor">Refactor</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority low"></span>
+                                <span class="task-id">#TASK-206</span>
+                            </div>
+                            <h4 class="task-title">Интеграция с облачным хранилищем</h4>
+                            <p class="task-desc">Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 17 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 4</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Наталья В.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label integration">Integration</span>
+                                    <span class="task-label cloud">Cloud</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority high"></span>
+                                <span class="task-id">#TASK-207</span>
+                            </div>
+                            <h4 class="task-title">Реализация анимаций интерфейса</h4>
+                            <p class="task-desc">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 18 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 5</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Артем Г.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label design">Design</span>
+                                    <span class="task-label frontend">Frontend</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority medium"></span>
+                                <span class="task-id">#TASK-208</span>
+                            </div>
+                            <h4 class="task-title">Документация для API</h4>
+                            <p class="task-desc">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 19 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 2</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Татьяна Р.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label docs">Docs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="add-task-btn">
+                        <i class="fas fa-plus"></i> Добавить задачу
+                    </button>
+                </div>
+
+                <!-- Доска 3 -->
+                <div class="board">
+                    <div class="board-header">
+                        <h3><i class="fas fa-eye"></i> Review</h3>
+                        <div class="board-actions">
+                            <button class="board-action-btn" title="Добавить задачу">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <button class="board-action-btn" title="Настройки">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="tasks-list">
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority medium"></span>
+                                <span class="task-id">#TASK-301</span>
+                            </div>
+                            <h4 class="task-title">Тестирование мобильной версии</h4>
+                            <p class="task-desc">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 13 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 4</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Виктор З.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label testing">Testing</span>
+                                    <span class="task-label mobile">Mobile</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority low"></span>
+                                <span class="task-id">#TASK-302</span>
+                            </div>
+                            <h4 class="task-title">Проверка безопасности системы</h4>
+                            <p class="task-desc">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 14 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 3</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Константин М.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label security">Security</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority high"></span>
+                                <span class="task-id">#TASK-303</span>
+                            </div>
+                            <h4 class="task-title">Код-ревью основного функционала</h4>
+                            <p class="task-desc">Alias consequatur aut perferendis doloribus asperiores repellat. Lorem ipsum dolor sit amet.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 15 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 8</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Юлия С.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label review">Review</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="add-task-btn">
+                        <i class="fas fa-plus"></i> Добавить задачу
+                    </button>
+                </div>
+
+                <!-- Доска 4 -->
+                <div class="board">
+                    <div class="board-header">
+                        <h3><i class="fas fa-check-circle"></i> Done</h3>
+                        <div class="board-actions">
+                            <button class="board-action-btn" title="Добавить задачу">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <button class="board-action-btn" title="Настройки">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="tasks-list">
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority completed"></span>
+                                <span class="task-id">#TASK-401</span>
+                            </div>
+                            <h4 class="task-title">Создание логотипа проекта</h4>
+                            <p class="task-desc">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 10 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 2</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Анна С.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label design">Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority completed"></span>
+                                <span class="task-id">#TASK-402</span>
+                            </div>
+                            <h4 class="task-title">Настройка CI/CD пайплайна</h4>
+                            <p class="task-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 11 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 5</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Иван К.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label devops">DevOps</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority completed"></span>
+                                <span class="task-id">#TASK-403</span>
+                            </div>
+                            <h4 class="task-title">Разработка landing page</h4>
+                            <p class="task-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 12 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 3</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Мария И.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label frontend">Frontend</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="add-task-btn">
+                        <i class="fas fa-plus"></i> Добавить задачу
+                    </button>
+                </div>
+
+                <!-- Доска 5 -->
+                <div class="board">
+                    <div class="board-header">
+                        <h3><i class="fas fa-pause-circle"></i> On Hold</h3>
+                        <div class="board-actions">
+                            <button class="board-action-btn" title="Добавить задачу">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <button class="board-action-btn" title="Настройки">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="tasks-list">
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority low"></span>
+                                <span class="task-id">#TASK-501</span>
+                            </div>
+                            <h4 class="task-title">Интеграция с CRM системой</h4>
+                            <p class="task-desc">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 20 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 1</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Сергей В.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label integration">Integration</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <span class="task-priority medium"></span>
+                                <span class="task-id">#TASK-502</span>
+                            </div>
+                            <h4 class="task-title">Миграция на новую версию фреймворка</h4>
+                            <p class="task-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                            <div class="task-meta">
+                                <span class="task-date"><i class="far fa-calendar"></i> 25 окт</span>
+                                <span class="task-comments"><i class="far fa-comment"></i> 0</span>
+                            </div>
+                            <div class="task-footer">
+                                <div class="task-assignee">
+                                    <div class="assignee-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Дмитрий С.</span>
+                                </div>
+                                <div class="task-labels">
+                                    <span class="task-label migration">Migration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="add-task-btn">
+                        <i class="fas fa-plus"></i> Добавить задачу
+                    </button>
+                </div>
+
+                <!-- Пустая доска для добавления -->
+                <div class="board add-new-board">
+                    <div class="add-board-content">
+                        <i class="fas fa-plus-circle"></i>
+                        <h3>Добавить новую доску</h3>
+                        <p>Создайте новую доску для организации задач</p>
+                        <button class="create-board-btn">Создать доску</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Всплывающее окно добавления задачи -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Новая задача</h3>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="form-group">
+                    <label for="task-title">Название задачи</label>
+                    <input type="text" id="task-title" placeholder="Введите название задачи">
+                </div>
+                <div class="form-group">
+                    <label for="task-desc">Описание</label>
+                    <textarea id="task-desc" placeholder="Опишите задачу подробнее" rows="4"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="task-priority">Приоритет</label>
+                        <select id="task-priority">
+                            <option value="low">Низкий</option>
+                            <option value="medium" selected>Средний</option>
+                            <option value="high">Высокий</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-date">Срок выполнения</label>
+                        <input type="date" id="task-date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Метки</label>
+                    <div class="tags-selector">
+                        <span class="tag-option" data-tag="design">Design</span>
+                        <span class="tag-option" data-tag="dev">Dev</span>
+                        <span class="tag-option" data-tag="testing">Testing</span>
+                        <span class="tag-option" data-tag="docs">Docs</span>
+                        <span class="tag-option" data-tag="meeting">Meeting</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary">Отмена</button>
+                <button class="btn-primary">Создать задачу</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Открытие/закрытие модального окна
+            const modalOverlay = document.querySelector('.modal-overlay');
+            const closeModalBtn = document.querySelector('.close-modal');
+            const cancelBtn = document.querySelector('.btn-secondary');
+            const addTaskBtns = document.querySelectorAll('.add-task-btn');
+            
+            function openModal() {
+                modalOverlay.style.display = 'flex';
+            }
+            
+            function closeModal() {
+                modalOverlay.style.display = 'none';
+            }
+            
+            addTaskBtns.forEach(btn => {
+                btn.addEventListener('click', openModal);
+            });
+            
+            closeModalBtn.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === modalOverlay) {
+                    closeModal();
+                }
+            });
+            
+            // Выбор меток
+            const tagOptions = document.querySelectorAll('.tag-option');
+            tagOptions.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    this.classList.toggle('selected');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
